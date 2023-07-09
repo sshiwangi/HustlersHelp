@@ -1,19 +1,12 @@
-const express = require('express');
+import http from 'http';
 
-//rest object
-const app = express();
+import app from './app.js';
 
-//rest api
-app.get("/", (req, res) => {
-    res.send({
-        message: "Welcome to HustlersHelp",
-    });
-});
+const server = http.createServer(app);
 
-//PORT
-const PORT = 8080;
+const port = process.env.PORT || 3000;
 
-//run listen
-app.listen(PORT, () => {
-    console.log(`Server running on ${PORT}`);
-})
+server.listen(port, () => {
+    console.log(`App running on port ${port}...`);
+}
+);
