@@ -31,7 +31,6 @@ function App() {
       <Route path='/mentors' element={<MentorList />} />
       <Route path='/learn' element={<Learn />} />
     </Routes>
-    <MentorList />
     <Footer/>
     </BrowserRouter>
     </>
