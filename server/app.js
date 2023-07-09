@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 import authRouter from './routes/authRoutes.js';
-import productRouter from './routes/productRoutes.js';
+// import productRouter from './routes/productRoutes.js';
 
 const app = express();
 
@@ -40,7 +40,7 @@ const limiter = rateLimit({
 
 app.use('/api', limiter);
 app.use('/api/auth', authRouter);
-app.use('api/products', productRouter)
+// app.use('api/products', productRouter)
 
 
 // Set security HTTP headers
