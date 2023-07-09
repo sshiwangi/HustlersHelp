@@ -2,7 +2,7 @@ import React from 'react'
 
 function FeaturedItems() {
   return (
-    <div>FeaturedItems</div>
+    <div className='text-blue-400'>FeaturedItems</div>
   )
 }
 
