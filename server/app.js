@@ -7,6 +7,7 @@ import mongoSanitize from 'express-mongo-sanitize';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
+import authRouter from './routes/authRoutes.js';
 
 const app = express();
 
@@ -36,7 +37,7 @@ const limiter = rateLimit({
     message: 'Too many requests from this IP, please try again in an hour!'
 });
 
-app.use('/api', limiter);
+app.use('/api', limiter, authRouter);
 
 
 // Set security HTTP headers
