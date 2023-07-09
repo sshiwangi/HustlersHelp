@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import './home.css'
 
 const Home = () => {
@@ -90,19 +89,6 @@ const Home = () => {
         </div>
       </div>
     </div>
-   
-=======
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
-
-const Home = () => {
-  return (
-    <div className='home-section'>
-      <Navbar />
-      hello
-      
-    </div>
->>>>>>> 5ef1f57ce07f9c376dd193c20458ee619ed7359a
   )
 }
 
