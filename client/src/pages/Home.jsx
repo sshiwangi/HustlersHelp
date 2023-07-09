@@ -1,87 +1,72 @@
 import React from 'react'
+import imageSrc from '../assets/digital-2.jpg';
+import Card from '../components/Card'
 
 const Home = () => {
   return (
-    <div class="Home-page">
-      <div className="home-page-container-first">
-      <div className="home-page-container-first-heading">Unleash Your Entrepreneurial Potential</div>
-      <div className="home-page-container-first-subheading">Learn,Connect,Unleash Your Entrepreneurial Brilliance!</div>
-      <div className="home-page-container-first-btn">Join Us</div>
-      <div className="home-page-container-first-slogan">
-        <div className="home-page-container-first-slogan-text">We empower aspiring entrepreneurs through learning resources, networking opportunities, and mentorship.</div>
-        </div>
-      </div>
-      <div className="home-page-container-second">
-        <div className="home-page-container-second-heading">What's in it for you?</div>
-        <div className="home-page-container-second-features">
-          {/* <div className="home-page-container-second-features-items"> */}
-            <div className="home-page-container-second-features-item-name">Find Mentors/Advisors</div>
-          </div>
-          <div className="home-page-container-second-features-items">
-            <div className="home-page-container-second-features-item-name">Find Co-founders/team members</div>
-          </div>
-          <div className="home-page-container-second-features-items">
-            <div className="home-page-container-second-features-item-name">Great Learning Resources</div></div>
-         <div className="home-page-container-second-features-items">
-          <div className="home-page-container-second-features-item-name">Access to exclusive events</div>
+    <div class="p-20">
+      <div className="hero-section mb-12 flex flex-col items-center justify-center ">
+        <h1 className='text-6xl font-extrabold text-black-900 flex items-center justify-center text-center'>Unleash Your <br /> Entrepreneurial
+        {/* <img src="" alt="" /> */}
+         <br /> Potential</h1>
+         <p className="text-323232 m-5">Learn, Connect, Unleash Your Entrepreneurial Brilliance.</p>
+         <div style={{ display: 'flex',height: '50px', borderRadius: '25PX', fontSize: '18px', fontWeight: '600',  color: 'white', width: '150px', justifyContent: 'center', alignItems: 'center', backgroundColor: '#458EFF'}}>
+          Join Us
          </div>
-         <div className="home-page-container-second-features-items">
-          <div className="home-page-container-second-features-item-name">Sell/Buy Equipments</div>
-         </div>
-        {/* </div> */}
       </div>
-      <div className="home-page-container-third">
-        <div className="home-page-container-heading"> Trending Courses</div>
-        <div className="home-page-container-trending-courses">
-          <div className="home-page-container-trending-courses-items">
-            <div className="course-image"></div>
-            {/* <div className="home-page-container-trending-courses-details"> */}
-              <div className="trending-course-name">Digital Marketing</div>
-              <div className="trending-course-details">In this course, students will gain practical experience by working on reak world projects. </div>
-              <div className="trending-courses-ratings">4.8</div>
-              <div className="trending-courses-explore-btn">Explore</div>
-            {/* </div> */}
+      <div className="flex items-center justify-center">
+        <div style={{backgroundColor: '#F9F9F9', padding: '30px',
+         borderRadius: '16px', width: '75%', justifyContent: 'center', alignItems: 'center' }}>
+          <h2 className='text-center text-2xl text-black-600'>We empower aspiring entrepreneurs <br />
+          through learning resources, networking <br />
+          opportunities, and mentorship</h2>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <h2 className='text-center text-2xl text-black-800'>What's in it for you?</h2>
+        {/* <img src="" alt="" /> */}
+        <div style={{display: 'grid',gridTemplateColumns: 'repeat(3, 1fr)', columnGap: '10px', rowGap: '20px'}}>
+          <div style={{borderRadius: '9px', width: '180px', height: '180px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          {/* <img src="" alt="" />   */}
+          <h3 className='text-center'>Find Mentors/Advisors</h3>
           </div>
-          <div className="home-page-container-trending-courses-items">
-            <div className="course-image"></div>
-            <div className="home-page-container-trending-courses-details">
-              <div className="trending-course-name">Email Marketing</div>
-              <div className="trending-course-details">In this course, students will gain practical experience by working on reak world projects. </div>
-               <div className="trending-courses-ratings">4.8</div>
-              <div className="trending-courses-explore-btn">Explore</div>
-            </div>
+          <div style={{borderRadius: '9px', width: '180px', height: '180px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          {/* <img src="" alt="" />   */}
+          <h3 className='text-center'>Find Co-founders/team members</h3>
+          </div>
+          <div style={{borderRadius: '9px', width: '180px', height: '180px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          {/* <img src="" alt="" />   */}
+          <h3 className='text-center'>Great Learning Resources</h3>
+          </div>
+          <div style={{borderRadius: '9px', width: '180px', height: '180px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          {/* <img src="" alt="" />   */}
+          <h3 className='text-center'>Access to exclusive events</h3>
+          </div>
+          <div style={{borderRadius: '9px', width: '180px', height: '180px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          {/* <img src="" alt="" />   */}
+          <h3 className='text-center'>Sell/Buy Equipments</h3>
           </div>
         </div>
-        <div className="view-all-btn">View all</div>
+
       </div>
-       <div className="home-page-container-fourth">
-        <div className="home-page-container-heading"> Trending items</div>
-        <div className="home-page-container-trending-courses">
-          <div className="home-page-container-trending-courses-items">
-            <div className="course-image"></div>
-            <div className="home-page-container-trending-courses-details">
-              <div className="trending-course-name">Iphone 14</div>
-              <div className="trending-course-details">Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps. </div>
-              <div className="trending-courses-rate">40000</div>
-              <div className="trending-courses-explore-btn">Explore</div>
-            </div>
-          </div>
-          <div className="home-page-container-trending-courses-items">
-            <div className="course-image"></div>
-            <div className="home-page-container-trending-courses-details">
-              <div className="trending-course-name">Email Marketing</div>
-              <div className="trending-course-details">The office chair keeps you comfy and focused with featureslike manually adjusted tilt option. </div>
-               <div className="trending-courses-rate">10000</div>
-              <div className="trending-courses-explore-btn">Explore</div>
-            </div>
-          </div>
+      <div className="trending-cources-section">
+        <h2 className="text-center text-2xl text-black-800">Trending Courses</h2>
+        <div className="flex items-center justify-center">
+          <Card />
+
+          <Card />
+
+          <Card />
         </div>
-        <div className="view-all-btn">View all</div>
       </div>
-      <div className="home-page-container-fifth">
-        <div className="home-page-container-newsletter">
-          <div className="newsletter-heading">Subscribe to our newsletter</div>
-          <div className="newsletter-input-email"> <input type='email' placeholder='Enter your email here'/></div>
+      <div className="trending-items-section">
+        <h2 className="text-center text-2xl text-black-800">Trending Items</h2>
+        <div className="flex items-center justify-center">
+          <Card />
+
+          <Card />
+
+          <Card />
         </div>
       </div>
     </div>
