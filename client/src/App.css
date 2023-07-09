@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;900&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
 }
+:root {
+  /* fonts */
+  --description-text: Archivo;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  /* font sizes */
+  --description-text-size: 26px;
+  --font-size-5xl: 24px;
+  --button-text-size: 40px;
+  --font-size-13xl: 32px;
+  --font-size-17xl: 36px;
+  --section-heading-size: 48px;
+  --fontbody-size: 96px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dodgerblue: #458eff;
+  --color-silver-100: #c5c5c5;
+  --color-darkslategray: #323232;
+  --color-whitesmoke: #f9f9f9;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  /* border radiuses */
+  --br-4xs: 9px;
+  --br-12xl: 31px;
+  --br-2xl: 21px;
+  --br-31xl: 50px;
+  --br-mini: 15px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* Effects */
+  --drop-shadow: 2px 2px 9px 5px rgba(151, 144, 144, 0.25);
 }

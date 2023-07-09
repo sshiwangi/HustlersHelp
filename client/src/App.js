@@ -1,13 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import Homepage from './pages/Homepage/Home'
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Homepage/Home';
+import Sell from './pages/Sellpage/Sell';
 
 function App() {
   return (
-    <div className="App">
-      <Homepage/>
-      
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar />
+    <Routes>
+      <Route path='/' element ={<Home />} />
+      <Route path='/sell' element ={<Sell />} />
+    </Routes>
+    <Footer/>
+    </BrowserRouter>
+    </>
   );
 }
 
