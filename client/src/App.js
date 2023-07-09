@@ -8,7 +8,7 @@ import Sell from './pages/Sell';
 import MentorList from './pages/MentorList';
 import FeaturedItems from './pages/FeaturedItems';
 import MentorSignup from './pages/MentorSignup';
-import StudentSignup from './pages/StudentSignup';
+import EntrepreneurSignup from './pages/EntrepreneurSignup';
 import Signin from './pages/Signin';
 import Events from './pages/Events';
 import About from './pages/About';
@@ -22,7 +22,7 @@ function App() {
     <Routes>
       <Route path='/' element ={<Home />} />
       <Route path='/signup/mentor' element ={<MentorSignup />} />
-      <Route path='/signup/student' element ={<StudentSignup />} />
+      <Route path='/signup/Entrepreneur' element ={<EntrepreneurSignup />} />
       <Route path='/signin' element ={<Signin />} />
       <Route path='/about' element ={<About />} />
       <Route path='/events' element ={<Events />} />
