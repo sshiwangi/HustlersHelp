@@ -13,6 +13,7 @@ import Signin from './pages/Signin';
 import Events from './pages/Events';
 import About from './pages/About';
 import Learn from './pages/Learn';
+import MentorDetails from './pages/MentorDetails';
 
 function App() {
   return (
@@ -28,7 +29,9 @@ function App() {
       <Route path='/events' element ={<Events />} />
       <Route path='/sell' element ={<Sell />} />
       <Route path='/products' element={<FeaturedItems />} />
-      <Route path='/mentors' element={<MentorList />} />
+      <Route path='/mentors' element={<MentorList />} >
+        <Route path=':id' element={<MentorDetails/>} />
+        </Route>
       <Route path='/learn' element={<Learn />} />
     </Routes>
     <Footer/>

@@ -13,9 +13,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center text-xl font-semibold basis-1/2">
           <Link to="/">Home</Link >
           <Link to="/about">About</Link >
-          <Link to="help">Help</Link >
-          <Link to="Events">Events</Link >
-          <Link to="Courses">Courses</Link >
+          <Link to="/help">Help</Link >
+          <Link to="/events">Events</Link >
+          <Link to="/courses">Courses</Link >
           <Link to='#'>Sell/Buy</Link>
         </div>
         <div className="text-white p-3 font-bold rounded text-xl bg-[#458EFF]"> 
