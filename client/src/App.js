@@ -29,9 +29,8 @@ function App() {
       <Route path='/events' element ={<Events />} />
       <Route path='/sell' element ={<Sell />} />
       <Route path='/products' element={<FeaturedItems />} />
-      <Route path='/mentors' element={<MentorList />} >
-        <Route path=':id' element={<MentorDetails/>} />
-        </Route>
+      <Route path='/mentors' element={<MentorList />} /> 
+      <Route path='/mentors/:id' element={<MentorDetails />} />
       <Route path='/learn' element={<Learn />} />
     </Routes>
     <Footer/>
