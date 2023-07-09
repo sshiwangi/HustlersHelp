@@ -1,0 +1,115 @@
+.footer-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-4xs) var(--br-4xs) 0 0;
+    background-color: var(--color-darkslategray);
+  }
+  
+  .logo1 {
+    position: absolute;
+    height: 11.69%;
+    width: 16.68%;
+    top: 15.84%;
+    right: 76.84%;
+    bottom: 72.47%;
+    left: 6.48%;
+    color: var(--color-white);
+  }
+  
+  .experience-the-power {
+    position: absolute;
+    width: 32.71%;
+    top: 34.81%;
+    left: 6.48%;
+    display: inline-block;
+    color: #e8e8e8;
+  }
+  
+  .company,
+  .socials,
+  .privacy,
+  .instagram,
+  .facebook,
+  .faq,
+  .help2,
+  .youtube {
+    position: absolute;
+    top: 18.44%;
+    color: var(--color-white);
+    text-decoration: none;
+  }
+  .company{
+    left: 67%;
+  }
+  
+  .socials {
+    top: 17.4%;
+    left: 84.13%;
+  }
+  
+  .instagram,
+  .privacy {
+    top: 30.65%;
+    left: 67.13%;
+  }
+  
+  .instagram {
+    top: 29.61%;
+    left: 84.13%;
+  }
+  
+  .facebook,
+  .faq,
+  .help2 {
+    top: 42.86%;
+    left: 67.13%;
+  }
+  
+  .facebook,
+  .help2 {
+    top: 41.82%;
+    left: 84.13%;
+  }
+  
+  .help2 {
+    top: 55.06%;
+    left: 67.13%;
+  }
+  
+  .youtube {
+    top: 54.03%;
+    left: 84.13%;
+  }
+  
+  .footer {
+    position: absolute;
+    top: 6313px;
+    left: 103px;
+    width: 1235px;
+    height: 385px;
+    font-size: var(--font-size-5xl);
+    color: var(--color-silver-100);
+  }
+  
+  .home {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 6698px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--section-heading-size);
+    color: var(--color-black);
+    font-family: var(--description-text);
+  }
+  
+  /* Hide the underline for links */
+  a {
+    text-decoration: none;
+  }
+  

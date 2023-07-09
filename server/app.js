@@ -8,6 +8,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 import authRouter from './routes/authRoutes.js';
+import productRouter from './routes/productRoutes.js';
 
 const app = express();
 
@@ -37,7 +38,9 @@ const limiter = rateLimit({
     message: 'Too many requests from this IP, please try again in an hour!'
 });
 
-app.use('/api', limiter, authRouter);
+app.use('/api', limiter);
+app.use('/api/auth', authRouter);
+app.use('api/products', productRouter)
 
 
 // Set security HTTP headers
