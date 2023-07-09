@@ -178,13 +178,13 @@ width: 527px;
     border-radius: 45px;
         background: #FFF;
 } */
-.home-page-container-first{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
+.Home-page{
+    display: flex;
+        flex-direction: column;
+        text-align: center;
 }
 .home-page-container-first-heading{
     font-size:45px;
-    width:900;
+    font-weight:900;
     font-family: Archivo;
 }

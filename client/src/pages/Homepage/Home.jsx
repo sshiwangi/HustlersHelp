@@ -5,11 +5,9 @@ const Home = () => {
   return (
     <div class="Home-page">
       <div className="home-page-container-first">
-        {/* <div className="home-page-container-first-section"> */}
       <div className="home-page-container-first-heading">Unleash Your Entrepreneurial Potential</div>
       <div className="home-page-container-first-subheading">Learn,Connect,Unleash Your Entrepreneurial Brilliance!</div>
       <div className="home-page-container-first-btn">Join Us</div>
-      {/* </div> */}
       <div className="home-page-container-first-slogan">
         <div className="home-page-container-first-slogan-text">We empower aspiring entrepreneurs through learning resources, networking opportunities, and mentorship.</div>
         </div>
