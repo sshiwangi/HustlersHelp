@@ -14,6 +14,7 @@ import Events from './pages/Events';
 import About from './pages/About';
 import Learn from './pages/Learn';
 import MentorDetails from './pages/MentorDetails';
+import Courses from './pages/Courses';
 
 function App() {
   return (
@@ -29,10 +30,10 @@ function App() {
       <Route path='/events' element ={<Events />} />
       <Route path='/sell' element ={<Sell />} />
       <Route path='/products' element={<FeaturedItems />} />
-      <Route path='/mentors' element={<MentorList />} >
-        <Route path=':id' element={<MentorDetails/>} />
-        </Route>
+      <Route path='/mentors' element={<MentorList />} /> 
+      <Route path='/mentors/:id' element={<MentorDetails />} />
       <Route path='/learn' element={<Learn />} />
+      <Route path='/courses' element={<Courses />} />
     </Routes>
     <Footer/>
     </BrowserRouter>

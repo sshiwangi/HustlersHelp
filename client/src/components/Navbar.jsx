@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { RiGraduationCapFill } from "react-icons/ri";
+import Popup from "./Popup";
 const Navbar = () => {
- 
+  const [isOpen, setIsOpen] = useState(false);
+  function openPopup() {
+    setIsOpen((prev) => !prev);
+  }
   return (
 
     <div className="p-10">
@@ -18,13 +22,14 @@ const Navbar = () => {
           <Link to="/help">Help</Link >
           <Link to="/events">Events</Link >
           <Link to="/courses">Courses</Link >
-          <Link to='#'>Sell/Buy</Link>
-        
+          <Link onClick={openPopup} to='sellbuy'>Sell/Buy</Link>
+
         </div>
         <div className="text-white p-3 font-bold rounded text-xl bg-[#458EFF]"> 
-          SignUp
+          Signin
         </div>
       </div>
+      {isOpen && <Popup />}
     </div>
   );
 };
