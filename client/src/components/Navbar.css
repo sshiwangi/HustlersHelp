@@ -148,6 +148,6 @@
     color: var(--color-black);
     font-family: var(--description-text);
   }
-  div {
+div {
     display: block;
 }
