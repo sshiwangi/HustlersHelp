@@ -24,7 +24,7 @@ const getMentorById = async (req, res) => {
 //@get all users
 const getAllUsers = async (req, res) => {
     try {
-        const users = await User.find({});
+        const users = await User.find({}).select("-password");
         res.json(users);
     } catch (error) {
         res.status(500).json({ message: "Something went wrong" });

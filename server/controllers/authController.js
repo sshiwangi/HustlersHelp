@@ -77,12 +77,12 @@ const loginUser = async (req, res) => {
     try {
         const user = await User.findOne({ email });
         if (user && (await user.matchPassword(password))) {
-            res.json({
-                _id: user._id,
+            res.status(200).json({
+                user_id: user._id,
                 firstName: user.firstName,
                 lastName: user.lastName,
-                email: user.email,
-                college: user.college,
+                isLoggedIn: true,
+                role: "enterpreneur",
                 token: generateToken(user._id),
             });
         }
@@ -102,11 +102,12 @@ const loginMentor = async (req, res) => {
     try {
         const mentor = await Mentor.findOne({ email });
         if (mentor && (await mentor.matchPassword(password))) {
-            res.json({
-                _id: mentor._id,
+            res.status(200).json({
+                user_id: mentor._id,
                 firstName: mentor.firstName,
                 lastName: mentor.lastName,
-                email: mentor.email,
+                isLoggedIn: true,
+                role: "mentor",
                 token: generateToken(mentor._id),
             });
         }

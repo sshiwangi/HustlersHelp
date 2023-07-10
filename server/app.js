@@ -41,11 +41,17 @@ const limiter = rateLimit({
 });
 
 app.use('/api', limiter);
-app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter)
 app.use('/api/mentors', mentorRouter)
 app.use('/api/users', userRouter)
+app.use('/api/auth', authRouter);
 
+app.all('*', (req, res, next) => {
+    res.status(404).json({
+        status: 'fail',
+        message: `Can't find ${req.originalUrl} on this server!`
+    });
+});
 
 // Set security HTTP headers
 app.use(helmet());
