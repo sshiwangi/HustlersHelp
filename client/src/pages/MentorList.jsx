@@ -10,6 +10,20 @@ const MentorList  = () => {
         image: "https://picsum.photos/200/300",
         skills: ["skill1", "skill2", "skill3"]
     }
+    ,{
+        id: 2,
+        name: "Mentor 2",
+        description: "Mentor 2 description",
+        image: "https://picsum.photos/200/300",
+        skills: ["skill1", "skill2", "skill3"]
+    },
+    {
+        id: 3,
+        name: "Mentor 3",
+        description: "Mentor 3 description",
+        image: "https://picsum.photos/200/300",
+        skills: ["skill1", "skill2", "skill3"]
+    }
     ]
 
     return (
