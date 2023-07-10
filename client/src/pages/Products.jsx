@@ -17,10 +17,10 @@ const data = [
         price: 100,
     }
 ]
-function FeaturedItems() {
+function Products() {
   return (<>
   
-    <div className='text-center font-bold text-3xl mb-6'>Featured Items</div>
+    <div className='mb-6 text-3xl font-bold text-center'>Featured Items</div>
     <div className='flex gap-6 px-9'>
     {data.map((item) => {
         return <Item item={item} />
@@ -30,4 +30,4 @@ function FeaturedItems() {
   )
 }
 
-export default FeaturedItems
+export default Products;

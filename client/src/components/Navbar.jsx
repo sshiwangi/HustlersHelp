@@ -33,9 +33,7 @@ const Navbar = () => {
           <Link to='signin' className="text-white p-3 font-bold rounded text-xl bg-[#458EFF]">
             Sign In
           </Link>
-        )
-        }
-        
+        )}
       </div>
 
     </div>
