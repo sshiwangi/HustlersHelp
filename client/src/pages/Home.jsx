@@ -64,24 +64,30 @@ const Home = () => {
         </div>
 
       </div>
-      <div className="mb-24">
+      <div className="mb-24 flex items-center flex-col">
         <h2 className="mb-16 text-4xl text-center text-black-900">Trending Courses</h2>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center  mb-6">
           <Card />
 
           <Card />
 
           <Card />
         </div>
+        <div className='flex w-1/6 justify-center items-center rounded-full pt-4 pb-4 bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+            Show More
+        </div>
       </div>
-      <div className="mb-24">
+      <div className="mb-24 flex items-center flex-col">
         <h2 className="mb-16 text-4xl text-center text-black-900">Trending Items</h2>
         <div className="flex items-center justify-center">
-          <Itemscard />
+          <Card />
 
           <Itemscard/>
 
           <Itemscard />
+        </div>
+        <div className='flex w-1/6 justify-center items-center rounded-full pt-4 pb-4 bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+            Show More
         </div>
       </div>
       <div className="flex items-center justify-center">

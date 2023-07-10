@@ -18,6 +18,7 @@ import About from './pages/About';
 import Learn from './pages/Learn';
 import MentorDetails from './pages/MentorDetails';
 import Courses from './pages/Courses';
+import Featuredetails from './pages/Featuredetails';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <Route path='/mentors/:id' element={<MentorDetails />} />
       <Route path='/learn' element={<Learn />} />
       <Route path='/courses' element={<Courses />} />
+      <Route path='/featuredetails' element={<Featuredetails />} />
     </Routes>
     <Footer/>
     </BrowserRouter>
