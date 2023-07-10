@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { RiGraduationCapFill } from "react-icons/ri";
-import Popup from "./Popup";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
@@ -9,15 +8,6 @@ const Navbar = () => {
 
   const { user } = useContext(AuthContext);
   console.log(user);
-  const [isOpen, setIsOpen] = useState(false);
-  //for dropdown feature of help
-
-
-  //function for popup of sell and buy feature
-  function openPopup() {
-    setIsOpen((prev) => !prev);
-  }
-
   return (
 
     <div className="p-10">
@@ -27,15 +17,14 @@ const Navbar = () => {
           <RiGraduationCapFill className="text-3xl text-[#458EFF]" />
           <div className="mx-2 text-3xl font-bold ">Hustler's <span className="text-[#458EFF]">Help</span></div>
         </div>
-        <div className="flex items-center justify-center gap-8 text-xl font-semibold basis-1/2">
+        <div className="flex items-center justify-center gap-6 text-xl font-semibold basis-1/2">
           <Link to="/">Home</Link >
           <Link to="/mentors">Find Mentors</Link>
           <Link to="/teams">Find Teams</Link>
           <Link to="/events">Events</Link >
           <Link to="/courses">Courses</Link >
-          <Link onClick={openPopup} to='sellbuy'>Sell/Buy
-          {isOpen && <Popup />}
-          </Link>
+          <Link to="/products">Browse Products</Link>
+          <Link to="/sell">Sell Here</Link>
         </div>
         {user?.isLoggedIn ? (
           <div class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
