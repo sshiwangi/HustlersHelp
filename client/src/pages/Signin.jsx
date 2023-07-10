@@ -3,9 +3,11 @@ import { useForm } from 'react-hook-form'
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthProvider';
 import axios from 'axios';
+import navigate, { Navigate } from 'react-router-dom';
+
 export default function Example() {
 
-  const { user, setUser } = useContext(AuthContext);
+  const { user, updateUser } = useContext(AuthContext);
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
@@ -13,13 +15,13 @@ export default function Example() {
     if (data.role === 'mentor') {
       const response = await axios.post('http://localhost:5000/api/auth/mentor/login', data);
       if (response.status === 200) {
-        setUser(response.data);
+        updateUser(response.data);
       }
     }
     else if (data.role === 'entrepreneur') {
       const response = await axios.post('http://localhost:5000/api/auth/entrepreneur/login', data);
       if (response.status === 200) {
-        setUser(response.data);
+        updateUser(response.data);
       }
     }
     else {
@@ -29,7 +31,10 @@ export default function Example() {
   };
 
 
-
+if(user.isLoggedIn){
+  return <Navigate to="/" />
+}
+ 
 
 
   return (<>

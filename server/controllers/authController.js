@@ -31,7 +31,7 @@ const registerUser = async (req, res) => {
             user_id: user._id,
             firstName: user.firstName,
             lastName: user.lastName,
-            email: user.email,
+            isLoggedIn: true,
             role: "enterpreneur",
             token: generateToken(user._id),
         });
@@ -58,10 +58,11 @@ const registerMentor = async (req, res) => {
             password,
         });
         res.status(201).json({
-            _id: mentor._id,
+            user_id: mentor._id,
             firstName: mentor.firstName,
             lastName: mentor.lastName,
-            email: mentor.email,
+            isLoggedIn: true,
+            role: "mentor",
             token: generateToken(mentor._id),
         });
     } catch (error) {
