@@ -1,17 +1,20 @@
 import React from "react";
 import MentorCard from "../components/MentorCard";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const MentorList  = () => {
-
-    const data= [{
-        id: 1,
-        name: "Mentor 1",
-        description: "Mentor 1 description",
-        image: "https://picsum.photos/200/300",
-        skills: ["skill1", "skill2", "skill3"]
-    }
-    ]
-
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        axios.get(`http://localhost:5000/api/mentors`)
+        .then((res) => {
+            console.log(res.data);
+            setData(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }, []);
     return (
         <>
         <div className="p-20">

@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 import Sell from './pages/Sell';
 import MentorList from './pages/MentorList';
-import FeaturedItems from './pages/FeaturedItems';
+import FeaturedItems from './pages/Products';
 import MentorSignup from './pages/MentorSignup';
 import EntrepreneurSignup from './pages/EntrepreneurSignup';
 import Signup from './pages/Signup';
@@ -18,7 +18,8 @@ import About from './pages/About';
 import Learn from './pages/Learn';
 import MentorDetails from './pages/MentorDetails';
 import Courses from './pages/Courses';
-import Featuredetails from './pages/Featuredetails';
+import Featuredetails from './pages/ProductDetails';
+import EventDetails from './pages/EventDetails';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path='/signup' element ={<Signup />} />
       <Route path='/about' element ={<About />} />
       <Route path='/events' element ={<Events />} />
+      <Route path='/events/:id' element ={<EventDetails />} />
       <Route path='/sell' element ={<Sell />} />
       <Route path='/products' element={<FeaturedItems />} />
       <Route path='/mentors' element={<MentorList />} /> 
