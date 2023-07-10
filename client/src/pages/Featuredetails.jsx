@@ -1,11 +1,10 @@
 import React from "react";
-import { Carousel } from "@material-tailwind/react";
-import DemoCarousel from "../components/DemoCarousel";
+import Carousel from "../components/Carousel";
 
 function Featuredetails() {
   return (
-    <div className="feature-details-section">
-        <DemoCarousel />
+    <div className="">
+        <Carousel />
     </div>
   );
 }
