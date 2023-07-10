@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
-function MentorDetails() {
+function MentorDetails(item) {
   const { id } = useParams();
   const [mentor, setMentor] = useState({});
   useEffect(() => {
