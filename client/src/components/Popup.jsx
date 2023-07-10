@@ -1,5 +1,6 @@
 import React from 'react'
 import popup from './popup.css'
+import { Link } from "react-router-dom";
 
 function Popup() {
   return (
@@ -9,15 +10,11 @@ function Popup() {
         </div>
         <div className="buy-sell-section">
             <div className="sell-btn">
-              <a href="/Sell" target="_blank" rel="noopener noreferrer">
-                 Sell
-                 </a>
+              <Link to="/sell">Sell</Link>
               </div>
 
             <div className="buy-btn">
-            <a href="/products" target="_blank" rel="noopener noreferrer">
-                 Buy
-            </a>
+            <Link to="/products">Buy</Link>
             
               </div>
         </div>

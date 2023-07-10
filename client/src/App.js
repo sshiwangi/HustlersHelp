@@ -9,6 +9,7 @@ import MentorList from './pages/MentorList';
 import FeaturedItems from './pages/FeaturedItems';
 import MentorSignup from './pages/MentorSignup';
 import EntrepreneurSignup from './pages/EntrepreneurSignup';
+import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import Events from './pages/Events';
 import About from './pages/About';
@@ -26,6 +27,7 @@ function App() {
       <Route path='/signup/mentor' element ={<MentorSignup />} />
       <Route path='/signup/Entrepreneur' element ={<EntrepreneurSignup />} />
       <Route path='/signin' element ={<Signin />} />
+      <Route path='/signup' element ={<Signup />} />
       <Route path='/about' element ={<About />} />
       <Route path='/events' element ={<Events />} />
       <Route path='/sell' element ={<Sell />} />

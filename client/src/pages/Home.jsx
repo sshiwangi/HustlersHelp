@@ -20,7 +20,7 @@ const Home = () => {
           Join Us
          </div>
       </div>
-      <div className="flex mb-24 items-center justify-center">
+      <div id='about' className="flex mb-24 items-center justify-center">
         <div style={{backgroundColor: '#F9F9F9', padding: '30px',
          borderRadius: '18px', width: '75%', height: "300px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <h2 className='text-center text-2xl text-black-600'>We empower aspiring entrepreneurs <br />
