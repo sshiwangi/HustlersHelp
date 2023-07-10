@@ -80,7 +80,7 @@ const Home = () => {
       <div className="mb-24 flex items-center flex-col">
         <h2 className="mb-16 text-4xl text-center text-black-900">Trending Items</h2>
         <div className="flex items-center justify-center">
-          <Card />
+           <Itemscard/>
 
           <Itemscard/>
 
