@@ -14,7 +14,6 @@ import EntrepreneurSignup from './pages/EntrepreneurSignup';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import Events from './pages/Events';
-import About from './pages/About';
 import Learn from './pages/Learn';
 import MentorDetails from './pages/MentorDetails';
 import Courses from './pages/Courses';
@@ -33,7 +32,6 @@ function App() {
       <Route path='/signup/entrepreneur' element ={<EntrepreneurSignup />} />
       <Route path='/signin' element ={<Signin />} />
       <Route path='/signup' element ={<Signup />} />
-      <Route path='/about' element ={<About />} />
       <Route path='/events' element ={<Events />} />
       <Route path='/events/:id' element ={<EventDetails />} />
       <Route path='/sell' element ={<Sell />} />
