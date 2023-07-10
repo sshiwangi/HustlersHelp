@@ -18,6 +18,7 @@ const AuthProvider = ({ children }) => {
     }
     const [user, setUser] = useState(getInitialState())
     const updateUser = ({ user_id, isLoggedIn, token,firstName,lastName,role }) => { // update user info from other component (Login)
+        console.log(user_id, isLoggedIn, token,firstName,lastName,role);
         localStorage.setItem('user', JSON.stringify({ ...user, user_id, isLoggedIn, token ,firstName,lastName,role}))
         setUser((prev) => ({ ...prev, user_id, isLoggedIn, token,firstName,lastName,role }))
     }

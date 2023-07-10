@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios';
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthProvider';
+import { Navigate } from 'react-router-dom';
 
 
 function EntrepreneurSignup() {
@@ -11,13 +12,15 @@ function EntrepreneurSignup() {
   const onSubmit = async (data) => {
     console.log(data);
     const response = await axios.post('http://localhost:5000/api/auth/entrepreneur/signup', data);
-    if (response.status === 200) {
+    if (response.status === 201) {
       updateUser(response.data);
     }
     console.log(response.data);
     reset();
   }
-
+  if(user && user.isLoggedIn){
+    return <Navigate to="/" />
+  }
   return (
     <form className="p-5 sm:p-8 md:p-12" onSubmit={handleSubmit(onSubmit)}>
     <div className="pl-40 pr-40 border border-gray-300 container-mentor-signup pt-7 pb-7">

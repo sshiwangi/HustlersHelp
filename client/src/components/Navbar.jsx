@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { RiGraduationCapFill } from "react-icons/ri";
 import Popup from "./Popup";
 import { Link } from "react-router-dom";
-import Home from "../pages/Home"
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthProvider";
 
 const Navbar = () => {
+
+  const { user } = useContext(AuthContext);
+  console.log(user);
   const [isOpen, setIsOpen] = useState(false);
   //for dropdown feature of help
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,7 +24,7 @@ const Navbar = () => {
   function openPopup() {
     setIsOpen((prev) => !prev);
   }
-  
+
   return (
 
     <div className="p-10">
@@ -34,25 +38,31 @@ const Navbar = () => {
           <Link to="/">Home</Link >
           <Link to="#about">About</Link >
           <Link onMouseEnter={handleNavHover} onMouseLeave={handleNavLeave} to="/help">
-            Help 
-          {isDropdownOpen && (
-            <div style={{width:'150px', height:'100px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '10px', borderRadius: '15px', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)'}}>
-              <Link to="/mentors">Find Mentors</Link>
-              Find Teams
-            </div>)}
+            Help
+            {isDropdownOpen && (
+              <div style={{ width: '150px', height: '100px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '10px', borderRadius: '15px', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+                <Link to="/mentors">Find Mentors</Link>
+                Find Teams
+              </div>)}
           </Link >
           <Link to="/events">Events</Link >
           <Link to="/courses">Courses</Link >
           <Link onClick={openPopup} to='sellbuy'>Sell/Buy
-          {isOpen && <Popup/>}
+            {isOpen && <Popup />}
           </Link>
 
         </div>
-        <Link to='signin' className="text-white p-3 font-bold rounded text-xl bg-[#458EFF]"> 
-          Signin
-        </Link>
+        {user?.isLoggedIn ? (
+          <div class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+            <span class="font-medium text-gray-600 dark:text-gray-300">JL</span>
+          </div>) : (
+          <Link to='signin' className="text-white p-3 font-bold rounded text-xl bg-[#458EFF]">
+            Signin
+          </Link>
+        )
+        }
       </div>
-      
+
     </div>
   );
 };
