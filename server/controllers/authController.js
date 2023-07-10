@@ -28,11 +28,11 @@ const registerUser = async (req, res) => {
             password,
         });
         res.status(201).json({
-            _id: user._id,
+            user_id: user._id,
             firstName: user.firstName,
             lastName: user.lastName,
             email: user.email,
-            college: user.college,
+            role: "enterpreneur",
             token: generateToken(user._id),
         });
     } catch (error) {
