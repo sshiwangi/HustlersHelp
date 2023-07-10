@@ -1,11 +1,14 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import axios from 'axios';
 
 function EntrepreneurSignup() {
 
   const { register, handleSubmit, reset } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
+    const response = await axios.post('http://localhost:5000/api/auth/entrepreneur/signup', data);
+    console.log(response.data);
     reset();
   }
 
@@ -39,8 +42,8 @@ function EntrepreneurSignup() {
           <input type="text" {...register('location')} id="location" className="w-full px-4 py-2 mt-3 mb-3 border border-gray-300 rounded" />
         </div>
         <div className="w-full sm:w-auto">
-          <label htmlFor="profession" className="mb-1">Profession</label>
-          <input type="text" {...register('profession')} id="profession" className="w-full px-4 py-2 mt-3 mb-3 border border-gray-300 rounded" />
+          <label htmlFor="profession" className="mb-1">College</label>
+          <input type="text" {...register('college')} id="college" className="w-full px-4 py-2 mt-3 mb-3 border border-gray-300 rounded" />
         </div>
         <div className="w-full sm:w-auto">
           <label htmlFor="experience" className="mb-1">Experience</label>

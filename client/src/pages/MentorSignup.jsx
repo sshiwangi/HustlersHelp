@@ -1,11 +1,14 @@
 import React from 'react'
 import {useForm } from 'react-hook-form'
+import axios from 'axios';
 
 function MentorSignup() {
 
   const { register, handleSubmit,reset} = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = async(data) => {
     console.log(data);
+    const response = await axios.post('http://localhost:5000/api/auth/mentor/signup', data);
+    console.log(response.data);
     reset();
   }
 
