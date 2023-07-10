@@ -8,6 +8,7 @@ import getcash from '../assets/Get Cash.png'
 import teamwork from '../assets/Teamwork.png'
 import tuition from '../assets/Tuition.png'
 import { Link } from 'react-router-dom';
+import Itemscard from '../components/Itemscard';
 
 const Home = () => {
   const aboutRef = React.useRef();
@@ -39,17 +40,17 @@ const Home = () => {
           <img style={{ height: '45px', marginBottom: '10px'}} src={teamwork} alt="" />  
           <h3 className='text-center'>Find Mentors/Advisors</h3>
           </div>
-          <div style={{borderRadius: '9px', marginBottom: '20px', marginRight: "10px", marginLeft: '10px',width: '180px', height: '180px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          <div style={{borderRadius: '9px', marginBottom: '20px', marginRight: "10px", marginLeft: '10px',width: '180px', height: '180px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)'  }}>
           <img style={{ height: '45px', marginBottom: '10px'}} src={elearning} alt="" />  
           <h3 className='text-center'>Find Co-founders/team members</h3>
           </div>
-          <div style={{borderRadius: '9px', marginBottom: '20px', marginRight: "10px", marginLeft: '10px',width: '180px', height: '180px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          <div style={{borderRadius: '9px', marginBottom: '20px', marginRight: "10px", marginLeft: '10px',width: '180px', height: '180px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)'}}>
           <img style={{ height: '45px', marginBottom: '10px'}} src={tuition} alt="" />  
           <h3 className='text-center'>Great Learning Resources</h3>
           </div>
           </div>
           <div className="flex">
-          <div style={{borderRadius: '9px', marginBottom: '20px', marginRight: "10px", marginLeft: '10px',width: '180px', height: '180px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)' }}>
+          <div style={{borderRadius: '9px', marginBottom: '20px', marginRight: "10px", marginLeft: '10px',width: '180px', height: '180px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', boxShadow: '2px 2px 9px 5px rgba(151, 144, 144, 0.25)', transition:'transform 0.3s ease'}}>
           <img  style={{ height: '45px', marginBottom: '10px'}}src={tuition} alt="" />  
           <h3 className='text-center'>Access to exclusive events</h3>
           </div>
@@ -76,15 +77,15 @@ const Home = () => {
       <div className="mb-24">
         <h2 className="mb-16 text-4xl text-center text-black-900">Trending Items</h2>
         <div className="flex items-center justify-center">
-          <Card />
+          <Itemscard />
 
-          <Card />
+          <Itemscard/>
 
-          <Card />
+          <Itemscard />
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div style={{width: "500px", height: '300px', backgroundColor: "#f9f9f9", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingBottom: '40px', borderRadius: "19px"}}>
+        <div style={{width: "500px", height: '300px', backgroundColor: "#f9f9f9", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', paddingBottom: '40px', borderRadius: "19px" }}>
           <img style={{height: '170px'}} src={subscribe} alt="subscribe" />
           <p className='mb-6 text-3xl font-bold'>Subscribe to our newsletter</p>
           <div className="flex justify-between w-3/4 bg-white rounded-full">

@@ -49,7 +49,7 @@ const Navbar = () => {
 
         </div>
         <Link to='signin' className="text-white p-3 font-bold rounded text-xl bg-[#458EFF]"> 
-          Signin
+          Sign in
         </Link>
       </div>
       

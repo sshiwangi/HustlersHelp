@@ -1,7 +1,7 @@
-import React from "react";
-import imageSrc from '../assets/digital-2.jpg';
+import React from 'react'
+import itemimageSrc from '../assets/chair.png';
 
-function Card() {
+const Itemscard = () => {
   return (
     <div
       style={{
@@ -16,19 +16,18 @@ function Card() {
     >
       <div style={{ width: "220px", height: "170px" }}>
         <img
-          src={imageSrc}
+          src={itemimageSrc}
           alt="digitalimg"
           style={{ backgroundSize: "cover" }}
         />
       </div>
       <div>
-        <h3 className="text-black-bold text-xl ml-2">Digital Marketing</h3>
+        <h3 className="text-black-bold text-xl mt-2 ml-2">Study chair</h3>
         <h4 className="text-gray text-s m-2">
-          In this course, students will gain practical experience by working on
-          real-world projects.
+        This study chair keeps you comfy and focused with features like manually adjustable tilt tension.
         </h4>
         <h4 className="text-black-bold ml-2 mb-1">
-          4.8
+          Rs 10000
           {/* <img src="" alt="" /> star icon */}
         </h4>
       </div>
@@ -43,12 +42,13 @@ function Card() {
           color: "white",
           fontWeight: "500px",
           fontSize: "18px",
+          
         }}
       >
         Explore
       </div>
     </div>
-  );
+  )
 }
 
-export default Card;
+export default Itemscard
