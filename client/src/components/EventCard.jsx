@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 function EventCard({ event }) {
     return (
-        <div class="max-w-sm w-64 bg-white border border-gray-200 rounded-lg shadow ">
+        <div class="max-w-sm w-80 bg-white border border-gray-200 rounded-lg shadow ">
             <Link to="#">
-                <img class="rounded-t-lg" src={event.image} className='h-56 w-full object-cover' alt="" />
+                <img class="rounded-t-lg" src={event.image} className='object-cover w-full h-56' alt="" />
             </Link>
             <div class="p-5">
                 <Link to="#">
