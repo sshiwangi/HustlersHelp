@@ -15,16 +15,18 @@ const Navbar = () => {
       <div className="bg-white w-full flex justify-between items-center px-6 py-3 rounded shadow border-[#D3CDCD] border">
         <div className="flex items-center justify-center h-full">
           <RiGraduationCapFill className="text-3xl text-[#458EFF]" />
-          <div className="mx-2 text-3xl font-bold ">Hustler's <span className="text-[#458EFF]">Help</span></div>
+          <div className="mx-2 text-2xl font-bold ">Hustlers <span className="text-[#458EFF]">Help</span></div>
         </div>
-        <div className="flex items-center justify-center gap-6 text-xl font-semibold basis-1/2">
-          <Link to="/">Home</Link >
-          <Link to="/mentors">Find Mentors</Link>
-          <Link to="/teams">Find Teams</Link>
+        <div className="flex items-center justify-center gap-6 text-xl font-semibold basis-1/2 ">
+          <Link to="/">Home 
+          </Link >
+          <Link  to="/mentors">Mentors
+          </Link>
+          <Link to="/teams">Teams</Link>
           <Link to="/events">Events</Link >
           <Link to="/courses">Courses</Link >
-          <Link to="/products">Browse Products</Link>
-          <Link to="/sell">Sell Here</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/sell">Sell</Link>
         </div>
         {user?.isLoggedIn ? (
           <div class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">

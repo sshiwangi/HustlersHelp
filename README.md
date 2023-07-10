@@ -10,44 +10,39 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
+- [Introduction](#introductions)
+- [Features](#feature)
 - [Technologies](#technologies)
 - [Build Process](#build-process)
 - [Contributors](#contributors)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Introduction
-<p align="center">
-  <img src = "http://i.imgur.com/HowF6aM.png" width=350>
-</p>
+##  Introduction
+<h3>HustlersHelp is the ultimate solution for ambitious entrepreneurs. We provide a unified platform that offers courses, mentors, guides, and a network of like-minded individuals. </h3>
+
+![WhatsApp Image 2023-07-10 at 13 22 46](https://github.com/sshiwangi/HustlersHelp/assets/77582783/5539aee7-b530-49ad-a5f2-7904e0317e4d)
+![WhatsApp Image 2023-07-10 at 13 25 51](https://github.com/sshiwangi/HustlersHelp/assets/77582783/cb6a9df4-75ce-4187-bd5b-3bb2350350c1)
+
+
 
 ## Features
 
-A few of the things you can do with GitPoint:
+A few of the things you can do with HustlersHelp:
 
-- View user activity feed
-- Communicate on your issue and pull request conversations
-- Close or lock issues
-- Apply labels and assignees
-- Review and merge pull requests
-- Create new issues
-- Star, watch and fork repositories
-- Control your unread and participating notifications
-- Easily search for any user or repository
+-  Find Mentors and advisors
+- Find co-founders/team members
+- Great Learning Sources
+- Access of exclusive events
+- Sell/Buy Equipments
 
-<p align="center">
-  <img src = "http://i.imgur.com/IkSnFRL.png" width=700>
-</p>
+![WhatsApp Image 2023-07-10 at 13 22 45](https://github.com/sshiwangi/HustlersHelp/assets/77582783/9447b587-22f9-4f03-bbd5-ba19712c68d8)
 
-<p align="center">
-  <img src = "http://i.imgur.com/0iorG20.png" width=700>
-</p>
-## Technologies Used
+## Technologies Used 
+## [React.js](https://reactjs.org/) | [Tailwind CSS](https://tailwindcss.com/) | [Express.js](https://expressjs.com/) | [Node.js](https://nodejs.org/) | [MongoDB](https://www.mongodb.com/)
 
 
-## Build Process
+## Build  Process
 
 - Follow the [React Native Guide](https://facebook.github.io/react-native/docs/getting-started.html) for getting started building a project with native code. **A Mac is required if you wish to develop for iOS.**
 - Clone or download the repo
@@ -59,7 +54,3 @@ A few of the things you can do with GitPoint:
 Please take a look at the [contributing guidelines](./CONTRIBUTING.md) for a detailed process on how to build your application as well as troubleshooting information.
 
 **Development Keys**: The `CLIENT_ID` and `CLIENT_SECRET` in `api/index.js` are for development purposes and do not represent the actual application keys. Feel free to use them or use a new set of keys by creating an [OAuth application](https://github.com/settings/applications/new) of your own. Set the "Authorization callback URL" to `gitpoint://welcome`.
-
-## Contributors
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification and is brought to you by these [awesome contributors](./CONTRIBUTORS.md).
