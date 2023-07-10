@@ -1,13 +1,19 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider';
+
 
 function EntrepreneurSignup() {
-
+  const { user, updateUser } = useContext(AuthContext);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
     const response = await axios.post('http://localhost:5000/api/auth/entrepreneur/signup', data);
+    if (response.status === 200) {
+      updateUser(response.data);
+    }
     console.log(response.data);
     reset();
   }
