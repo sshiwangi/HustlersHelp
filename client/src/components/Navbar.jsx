@@ -18,8 +18,10 @@ const Navbar = () => {
           <div className="mx-2 text-2xl font-bold ">Hustlers <span className="text-[#458EFF]">Help</span></div>
         </div>
         <div className="flex items-center justify-center gap-6 text-xl font-semibold basis-1/2 ">
-          <Link to="/">Home</Link >
-          <Link to="/mentors">Mentors</Link>
+          <Link to="/">Home 
+          </Link >
+          <Link  to="/mentors">Mentors
+          </Link>
           <Link to="/teams">Teams</Link>
           <Link to="/events">Events</Link >
           <Link to="/courses">Courses</Link >
