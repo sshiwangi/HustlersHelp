@@ -36,7 +36,7 @@ const Footer = () => {
           <div >
             <div className='flex mb-2'>
               <RiGraduationCapFill className="text-3xl mr-2 text-[#458EFF]" />
-              <div className='text-3xl font-bold mr-2 '>Hustler's <span className='text-[#458EFF] text-3xl'>Help</span></div>
+              <div className='text-3xl font-bold mr-2 '>Hustlers<span className='text-[#458EFF] text-3xl'>Help</span></div>
             </div>
             <div className='text-gray-300 w-2/3'>
               Experience the power of learning, connecting, and thriving as an entrepreneur with us. Together, we can turn your dreams into reality.

@@ -18,8 +18,8 @@ const MentorList  = () => {
     return (
         <>
         <div className="p-20">
-            <div className="mb-3 text-3xl font-bold">Mentor List</div>
-            <div className="mb-5" >Unlock Your Potential With mentorship</div>
+            <div className="mb-3 text-3xl font-bold text-center">Mentor List</div>
+            <div className="mb-5 text-center" >Unlock Your Potential With mentorship</div>
             <div className="flex flex-wrap items-center justify-center gap-4">
             {data.map((item) => {
                 return <MentorCard item={item} />

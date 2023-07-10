@@ -20,6 +20,7 @@ import Courses from './pages/Courses';
 import Featuredetails from './pages/ProductDetails';
 import EventDetails from './pages/EventDetails';
 import FIndTeam from './pages/FIndTeam';
+import CTTest from './pages/CTTest';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
       <Route path='/learn' element={<Learn />} />
       <Route path='/courses' element={<Courses />} />
       <Route path='/featuredetails' element={<Featuredetails />} />
+      <Route path='/CTTest' element={<CTTest />} />
     </Routes>
     <Footer/>
     </BrowserRouter>
