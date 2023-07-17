@@ -2,7 +2,7 @@ import { RiGraduationCapFill } from 'react-icons/ri'
 function Navbar() {
 	return (
 		<div className='lg:mx-16 lg:my-8'>
-			<div className="px-5 lg:border-2 lg:rounded navbar lg:border-base-300">
+			<div className="px-5 lg:border-2 lg:rounded-lg navbar lg:border-base-300">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
