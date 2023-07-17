@@ -1,13 +1,14 @@
 import { RiGraduationCapFill } from 'react-icons/ri'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
 	// TODO: Replace with actual login state
 	const [loggedIn, setLoggedIn] = useState(false);
-
+	const navigate = useNavigate();
 	return (
 		<div className='lg:mx-16 lg:my-8'>
-			<div className="px-5 lg:border-2 lg:rounded-lg navbar lg:border-base-300">
+			<div className="px-5 lg:border-2 lg:rounded-lg navbar lg:border-neutral-400">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,7 +47,6 @@ function Navbar() {
 						<li><a>Sell/Buy</a></li>
 					</ul>
 				</div>
-
 				{
 					loggedIn
 						?
@@ -83,14 +83,28 @@ function Navbar() {
 									</li>
 									<li><a>Settings</a></li>
 									{/* TODO: handle logout */}
-									<li><a onClick={()=>setLoggedIn(false)} >Logout</a></li>
+									<li><a onClick={() => setLoggedIn(false)} >Logout</a></li>
 								</ul>
 							</div>
 						</div>
 						:
 						<div className="navbar-end">
 							{/* TODO: handle sign in */}
-							<a onClick={()=>setLoggedIn(true)} className="btn btn-sm lg:btn-md btn-primary text-neutral-content">Sign In</a>
+
+							<div className="dropdown dropdown-end">
+								<label tabIndex={0}>
+									<a className="btn btn-sm lg:btn-md btn-primary text-neutral-content">Sign In</a>
+								</label>
+								<div tabIndex={0} className="dropdown-content card shadow z-[1] card-compact p-2 bg-base-100 rounded-box w-64 mt-3">
+									<div className="items-center text-center card-body">
+										<h2 className="card-title">Sign in as</h2>
+										<div className="card-actions flex-nowrap">
+											<button onClick={()=>navigate('/signin/mentor')} className="btn btn-primary">Mentor</button>
+											<button onClick={()=>navigate('/signin/student')} className="btn btn-primary">Student</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 				}
 			</div>
