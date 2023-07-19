@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 function Card(props) {
     return (
-        <div className="p-6 shadow w-72 md:w-96 card bg-base-200">
+        <div key={props.id} className="p-6 shadow w-72 md:w-96 card bg-base-200">
             <div className="items-center justify-center gap-12 card-body">
                 <div className='text-6xl text-primary'>{props.icon}</div>
                 <div className="font-bold">{props.text}</div>
@@ -17,7 +17,8 @@ function Card(props) {
 }
 Card.propTypes = {
     icon: PropTypes.object,
-    text: PropTypes.string
+    text: PropTypes.string,
+    id:PropTypes.number
 }
 
 
@@ -29,22 +30,27 @@ function FeatureCards() {
             <div className='flex flex-wrap items-center justify-center gap-12 my-12'>
                 {[
                     {
+                        id:1,
                         icon: <RiPresentationFill />,
                         text: 'Find Mentors/Advisors'
                     },
                     {
+                        id:2,
                         icon: <MdGroups />,
                         text: 'Find Co-founders/team members'
                     },
                     {
+                        id:3,
                         icon: <MdLaptopWindows />,
                         text: 'Great Learning  Resources'
                     },
                     {
+                        id:4,
                         icon: <MdEvent />,
                         text: 'Access to exclusive events'
                     },
                     {
+                        id:5,
                         icon: <GiReceiveMoney />,
                         text: 'Sell/Buy Equipments'
                     },

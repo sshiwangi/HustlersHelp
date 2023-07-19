@@ -2,6 +2,8 @@ import Carousel from "../components/Carousel"
 import FeatureCards from "../components/FeatureCards"
 import Hero from "../components/Hero"
 import CourseCard from "../components/CourseCard"
+import ItemCard from "../components/ItemCard"
+import Newsletter from "../components/Newsletter"
 import brushStroke from '../assets/brushStroke.svg'
 import { useNavigate } from "react-router-dom"
 
@@ -36,6 +38,60 @@ const courseData = [
   }
 ]
 
+const itemData = [
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  {
+    id:'dfdfdrg',
+    name: 'iPhone 14',
+    img: 'http://placehold.it/100x300',
+    description: 'Advanced camera system with cinematic mode now in 4K Dolby Vision up to 30 fps.',
+    price: 40_000
+  },
+  
+
+]
+
 
 function Home() {
   const navigate = useNavigate()
@@ -53,10 +109,14 @@ function Home() {
       {/* Trending Courses Section End */}
 
       {/* Trending Items Section Start */}
-      {/* TODO: Code Here */}
+      <div className="flex flex-col my-12">
+        <div className="relative self-center mb-12 text-4xl font-bold text-center">Trending Items <img src={brushStroke} className='absolute w-full h-full -z-10 -bottom-4' alt="" /></div>
+        <Carousel elements={itemData.map(ItemCard)} />
+        <button onClick={()=>{navigate('/items')}} className="self-center btn btn-primary btn-outline">View All</button>
+      </div>
       {/* Trending Items Section End */}
 
-      {/* Newsletter Card Here */}
+      <Newsletter/>
     </div>
   )
 }
