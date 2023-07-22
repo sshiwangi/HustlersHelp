@@ -5,9 +5,9 @@ const authRouter = Router()
 
 //@desc Routes for authentication
 
-authRouter.post('/entrepreneur/signup',registerUser);
+authRouter.post('/student/signup',registerUser);
+authRouter.post('/student/signin',loginUser);
 authRouter.post('/mentor/signup',registerMentor);
-authRouter.post('/entrepreneur/login',loginUser);
-authRouter.post('/mentor/login',loginMentor);
+authRouter.post('/mentor/signin',loginMentor);
 
 export default authRouter;
