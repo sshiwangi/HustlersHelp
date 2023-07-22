@@ -1,10 +1,11 @@
 import { RiGraduationCapFill } from 'react-icons/ri'
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
-	// TODO: Replace with actual login state
-	const [loggedIn, setLoggedIn] = useState(false);
+	// const dispatch = useDispatch();
+	const { firstName, lastName, token, role, isLoggedIn } = useSelector(state => state.auth);
+	console.log(firstName, lastName, token, role, isLoggedIn);
 	const navigate = useNavigate();
 	return (
 		<div className='lg:mx-16 lg:my-8'>
@@ -15,40 +16,40 @@ function Navbar() {
 							<svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
 						</label>
 						<ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold">
-							<li><a>Home</a></li>
+							<li onClick={() => navigate('/')}><a>Home</a></li>
 							<li>
 								<a>Find Help</a>
 								<ul className="p-2">
-									<li><a>Find Teammate</a></li>
-									<li><a>Find Mentor</a></li>
+									<li onClick={() => navigate('/teammates')}><a>Find Teammate</a></li>
+									<li onClick={() => navigate('/mentors')}><a>Find Mentor</a></li>
 								</ul>
 							</li>
-							<li><a>Events</a></li>
-							<li><a>Learn</a></li>
-							<li><a>Sell/Buy</a></li>
+							<li onClick={() => navigate('/events')}><a>Events</a></li>
+							<li onClick={() => navigate('/courses')}><a>Learn</a></li>
+							<li onClick={() => navigate('/shop')}><a>Sell/Buy</a></li>
 						</ul>
 					</div>
 					<button className="text-base normal-case lg:text-xl btn btn-ghost"><RiGraduationCapFill className='text-xl lg:text-3xl text-primary' /> Hustler&apos;s<span className='text-primary'>Help</span></button>
 				</div>
 				<div className="hidden navbar-center lg:flex">
 					<ul className="px-1 font-bold menu menu-horizontal">
-						<li><a>Home</a></li>
+						<li onClick={() => navigate('/')}><a>Home</a></li>
 						<li tabIndex={0}>
 							<details>
 								<summary>Find Help</summary>
 								<ul className="p-2">
-									<li><a>Find Teammate</a></li>
-									<li><a>Find Mentor</a></li>
+									<li onClick={() => navigate('/teammates')}><a>Find Teammate</a></li>
+									<li onClick={() => navigate('/mentors')}><a>Find Mentor</a></li>
 								</ul>
 							</details>
 						</li>
-						<li><a>Events</a></li>
-						<li><a>Learn</a></li>
-						<li><a>Sell/Buy</a></li>
+						<li onClick={() => navigate('/events')}><a>Events</a></li>
+						<li onClick={() => navigate('/courses')}><a>Learn</a></li>
+						<li onClick={() => navigate('/shop')}><a>Sell/Buy</a></li>
 					</ul>
 				</div>
 				{
-					loggedIn
+					isLoggedIn
 						?
 						<div className="gap-2 navbar-end">
 							<div className="dropdown dropdown-end">
@@ -83,7 +84,7 @@ function Navbar() {
 									</li>
 									<li><a>Settings</a></li>
 									{/* TODO: handle logout */}
-									<li><a onClick={() => setLoggedIn(false)} >Logout</a></li>
+									<li><a onClick={() => { }} >Logout</a></li>
 								</ul>
 							</div>
 						</div>
@@ -99,8 +100,8 @@ function Navbar() {
 									<div className="items-center text-center card-body">
 										<h2 className="card-title">Sign in as</h2>
 										<div className="card-actions flex-nowrap">
-											<button onClick={()=>navigate('/signin/mentor')} className="btn btn-primary">Mentor</button>
-											<button onClick={()=>navigate('/signin/student')} className="btn btn-primary">Student</button>
+											<button onClick={() => navigate('/mentor/signin')} className="btn btn-primary">Mentor</button>
+											<button onClick={() => navigate('/student/signin')} className="btn btn-primary">Student</button>
 										</div>
 									</div>
 								</div>

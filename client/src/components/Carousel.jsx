@@ -42,7 +42,7 @@ const Carousel = ({ elements }) => {
                     swiper.params.navigation.nextEl = navigationNextRef.current;
                 }}
                 onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                onSwiper={() => {}}
             >
                 {elements.map((element, i) => <SwiperSlide key={i} ><div className='flex items-center justify-center'>{element}</div></SwiperSlide>)}
             </Swiper>
