@@ -39,7 +39,9 @@ const limiter = rateLimit({
     windowMs: 60 * 60 * 1000, // 1 hour
     message: 'Too many requests from this IP, please try again in an hour!'
 });
-
+app.get('/', (req, res) => {
+    res.send('API is running....');
+});
 app.use('/api', limiter);
 app.use('/api/products', productRouter)
 app.use('/api/mentors', mentorRouter)

@@ -1,30 +1,50 @@
 import PropType from 'prop-types'
 import signinImage from '../assets/signin.svg'
 import googleIcon from '../assets/google.svg'
+import { useForm } from "react-hook-form";
+import {signInMentor,signInStudent} from '../redux/actions/authAction'
+import { useDispatch,useSelector } from 'react-redux'
+import { Navigate } from 'react-router-dom'
+
 function SignIn({ role }) {
+    const dispatch = useDispatch()
+    const {isLoggedIn} = useSelector((state)=>state.auth)
+    const { register, handleSubmit } = useForm();
+    const onSubmit = (data) => {
+        if (role === 'student') {
+            dispatch(signInStudent(data))
+        } else {
+            dispatch(signInMentor(data))
+        }
+    }
+
+    if(isLoggedIn){
+        return <Navigate to={'/'} />
+    }
+    
     return (
         <div className='flex flex-col flex-1 lg:mx-16'>
             <div className='flex flex-col items-center justify-center gap-6 my-12 lg:flex-row '>
                 <div className='flex flex-col items-center justify-center w-full'>
-                    <form className='flex flex-col gap-8' onSubmit={(e)=>{e.preventDefault()}} >
+                    <form className='flex flex-col gap-8' onSubmit={handleSubmit(onSubmit)} >
                         <h1 className='text-xl font-bold md:text-3xl text-primary'>Sign In as {role === 'student' ? 'Student' : 'Mentor'}</h1>
                         <div className="w-full max-w-xs form-control">
                             <label className="label" htmlFor='email'>
                                 <span className="text-lg label-text ">Enter Your Email</span>
                             </label>
-                            <input id='email' type="email" placeholder="john.doe@gmail.com" className="w-full max-w-xs input input-bordered" />
+                            <input id='email' type="email" placeholder="john.doe@gmail.com" className="w-full max-w-xs input input-bordered" {...register('email')} />
                         </div>
                         <div className="w-full max-w-xs form-control">
                             <label className="label" htmlFor='password'>
                                 <span className="text-lg label-text">Enter Your Password</span>
                             </label>
-                            <input id='password' type="password" placeholder="Password" className="w-full max-w-xs input input-bordered" />
+                            <input id='password' type="password" placeholder="Password" className="w-full max-w-xs input input-bordered" {...register('password')} />
                             <label className="justify-end label">
                                 <a className="link link-primary">Forgot Password?</a>
                             </label>
                         </div>
                         <button className="capitalize btn btn-outline btn-primary" type='submit' >Sign In</button>
-                        <button className="btn" type='button'><img src={googleIcon} width={24} alt="" className='mr-3'/>Sign In with Google</button>
+                        <button className="btn" type='button'><img src={googleIcon} width={24} alt="" className='mr-3' />Sign In with Google</button>
                     </form>
                 </div>
                 <div className='flex items-center justify-center w-full p-12'>
@@ -32,7 +52,6 @@ function SignIn({ role }) {
                 </div>
             </div>
         </div>
-
     )
 }
 
