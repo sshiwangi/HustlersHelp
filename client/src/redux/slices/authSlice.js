@@ -25,6 +25,11 @@ const authSlice = createSlice({
             console.log('fullfilesd', action.payload)
             state.loading = false;
             state.error = null;
+            localStorage.setItem('firstname', action.payload.firstName);
+            localStorage.setItem('lastname', action.payload.lastName);
+            localStorage.setItem('isloggedin', action.payload.isLoggedIn);
+            localStorage.setItem('role', action.payload.role);
+            localStorage.setItem('token', action.payload.token);
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
             state.token = action.payload.token;
@@ -44,6 +49,11 @@ const authSlice = createSlice({
         builder.addCase(signInStudent.fulfilled, (state, action) => {
             state.loading = false;
             state.error = null;
+            localStorage.setItem('firstname', action.payload.firstName);
+            localStorage.setItem('lastname', action.payload.lastName);
+            localStorage.setItem('isloggedin', action.payload.isLoggedIn);
+            localStorage.setItem('role', action.payload.role);
+            localStorage.setItem('token', action.payload.token);
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
             state.token = action.payload.token;
@@ -63,6 +73,11 @@ const authSlice = createSlice({
         builder.addCase(signUpMentor.fulfilled, (state, action) => {
             state.loading = false;
             state.error = null;
+            localStorage.setItem('firstname', action.payload.firstName);
+            localStorage.setItem('lastname', action.payload.lastName);
+            localStorage.setItem('isloggedin', action.payload.isLoggedIn);
+            localStorage.setItem('role', action.payload.role);
+            localStorage.setItem('token', action.payload.token);
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
             state.token = action.payload.token;
@@ -82,6 +97,11 @@ const authSlice = createSlice({
         builder.addCase(signUpStudent.fulfilled, (state, action) => {
             state.loading = false;
             state.error = null;
+            localStorage.setItem('firstname', action.payload.firstName);
+            localStorage.setItem('lastname', action.payload.lastName);
+            localStorage.setItem('isloggedin', action.payload.isLoggedIn);
+            localStorage.setItem('role', action.payload.role);
+            localStorage.setItem('token', action.payload.token);
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
             state.token = action.payload.token;
